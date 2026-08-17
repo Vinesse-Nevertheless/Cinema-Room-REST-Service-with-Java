@@ -4,10 +4,14 @@ public class Seats {
 
     private int row;
     private int column;
+    private int price;
 
-    public Seats(int row, int col){
+    public Seats(){}
+
+    public Seats(int row, int column, int price){
         this.row = row;
-        this.column = col;
+        this.column = column;
+        this.price = price;
     }
 
     public int getRow() {
@@ -22,8 +26,17 @@ public class Seats {
         return column;
     }
 
-    public void setColumn(int col) {
+    public void setColumn(int column) {
         this.column = column;
+    }
+
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
 }
