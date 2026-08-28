@@ -11,15 +11,6 @@ files:
   - name: build.gradle
     visible: true
     learner_created: false
-  - name: src/cinema/RESTservice.java
-    visible: true
-    learner_created: true
-  - name: src/cinema/Cinema.java
-    visible: true
-    learner_created: true
-  - name: src/cinema/Seats.java
-    visible: true
-    learner_created: true
 feedback_link: https://hyperskill.org/projects/189/stages/945/implement#comment
 status: Solved
 record: -1

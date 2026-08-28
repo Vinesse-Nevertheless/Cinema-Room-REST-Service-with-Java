@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="25">
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task.main" target="21" />
+      <module name="Cinema_Room_REST_Service_with_Java.util.main" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task" options="-parameters" />
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task.main" options="-parameters" />
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task.test" options="-parameters" />
+    </option>
+  </component>
+</project>

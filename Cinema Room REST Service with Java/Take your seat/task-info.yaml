@@ -20,9 +20,6 @@ files:
     learner_created: false
   - name: test/CinemaTests.java
     learner_created: false
-  - name: src/cinema/SeatNotFoundException.java
-    visible: true
-    learner_created: true
 feedback_link: https://hyperskill.org/projects/189/stages/946/implement#comment
 status: Solved
 record: -1

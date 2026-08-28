@@ -14,17 +14,18 @@ public class Cinema {
     private LinkedList<Seats> seats = new LinkedList<>();
 
 
-    public Cinema(int rows, int columns){
+    public Cinema(int rows, int columns) {
         this.rows = rows;
         this.columns = columns;
-        int i = 1;
 
+        int i = 0;
         for (int r = 0; r < rows; r++) {
-            if (r > 3){
+            if (r > 3) {
                 price = 8;
             }
             for (int c = 0; c < columns; c++) {
-                seats.add(new Seats(r+1, c+1, price));
+                seats.add(new Seats(r + 1, c + 1, price, i));
+                i++;
             }
         }
     }
@@ -43,21 +44,28 @@ public class Cinema {
         return seats;
     }
 
-    public Seats canPurchaseCinemaSeat(int requestRow, int requestedColumn){
-       for (Seats s : seats){
-           if (s.getRow() == requestRow && s.getColumn() == requestedColumn){
-               seats.remove(s);
-               return s;
-           }
-       }
+    public Seats isAvailableSeat(int requestRow, int requestedColumn) {
+        for (Seats s : seats) {
+            if (s.getRow() == requestRow && s.getColumn() == requestedColumn) {
+                seats.remove(s);
+                return s;
+            }
+        }
 
         return null;
     }
 
 
-    public boolean isCinemaSeat(int requestRow, int requestColumn){
+    public boolean isCinemaSeat(int requestRow, int requestColumn) {
         return requestRow >= 1 && requestRow <= rows
                 && requestColumn >= 1 && requestColumn <= columns;
+    }
+
+    public void restoreSeatToCinema(Seats refundedSeat) {
+        if (!isCinemaSeat(refundedSeat.getRow(), refundedSeat.getColumn())) {
+            return;
+        }
+        seats.add(refundedSeat.getIndex(), refundedSeat);
     }
 
 }
