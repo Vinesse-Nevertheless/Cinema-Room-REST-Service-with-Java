@@ -11,7 +11,7 @@ public class Purchase {
     private UUID token;
     private Seats ticket;
 
-    private Map<UUID, Seats> purchasedSeatMap = new HashMap<>();
+    private static Map<UUID, Seats> purchasedSeatMap = new HashMap<>();
 
     public Purchase() {
     }
@@ -33,10 +33,6 @@ public class Purchase {
     @JsonIgnore
     public Map<UUID, Seats> getPurchasedSeatMap() {
         return purchasedSeatMap;
-    }
-
-    public void setPurchasedSeatMap(Map<UUID, Seats> purchasedSeatMap) {
-        this.purchasedSeatMap = purchasedSeatMap;
     }
 
     public Seats getTicket() {

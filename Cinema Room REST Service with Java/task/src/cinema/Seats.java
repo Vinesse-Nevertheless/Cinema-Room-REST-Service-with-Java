@@ -8,16 +8,13 @@ public class Seats {
     private int column;
     private int price;
 
-    private int index;
-
     public Seats() {
     }
 
-    public Seats(int row, int column, int price, int index) {
+    public Seats(int row, int column, int price) {
         this.row = row;
         this.column = column;
         this.price = price;
-        this.index = index;
     }
 
     public int getRow() {
@@ -42,15 +39,6 @@ public class Seats {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    @JsonIgnore
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
     }
 
 

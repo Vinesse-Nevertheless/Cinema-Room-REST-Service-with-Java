@@ -2,6 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="25">
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task-build-classes-java.main" target="21" />
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task-build-generated-sources-annotationProcessor-java.main" target="21" />
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task-build-generated-sources-headers-java.main" target="21" />
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task-build-reports-tests.main" target="21" />
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task-build-test-results.main" target="21" />
+      <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task-build-tmp.main" target="21" />
       <module name="Cinema_Room_REST_Service_with_Java.Cinema_Room_REST_Service_with_Java-task.main" target="21" />
       <module name="Cinema_Room_REST_Service_with_Java.util.main" target="21" />
     </bytecodeTargetLevel>

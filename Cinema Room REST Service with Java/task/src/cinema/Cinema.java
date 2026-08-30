@@ -18,14 +18,12 @@ public class Cinema {
         this.rows = rows;
         this.columns = columns;
 
-        int i = 0;
         for (int r = 0; r < rows; r++) {
             if (r > 3) {
                 price = 8;
             }
             for (int c = 0; c < columns; c++) {
-                seats.add(new Seats(r + 1, c + 1, price, i));
-                i++;
+                seats.add(new Seats(r + 1, c + 1, price));
             }
         }
     }
@@ -65,7 +63,13 @@ public class Cinema {
         if (!isCinemaSeat(refundedSeat.getRow(), refundedSeat.getColumn())) {
             return;
         }
-        seats.add(refundedSeat.getIndex(), refundedSeat);
+
+        for (int i = 0; i < seats.size() ; i++) {
+            if (seats.get(i).getRow() == refundedSeat.getRow() && seats.get(i).getColumn() > refundedSeat.getColumn()){
+                seats.add(i, refundedSeat);
+                break;
+            }
+        }
     }
 
 }
