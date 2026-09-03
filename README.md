@@ -65,15 +65,16 @@ Once started, the service will be listening at:
 
 👉 http://localhost:28852
 
-##🔌 API Documentation
+## 🔌 API Documentation
+
 ### 1. View Seating Layout
 Returns the cinema layout and a list of all currently available seats with their respective prices.
 
-- URL: http://localhost:28852/seats
+  - URL: http://localhost:28852/seats
 
-- Method: GET
+  - Method: GET
 
-- Response (200 OK):
+  - Response (200 OK):
 
 ``` json
 {
@@ -97,13 +98,13 @@ Returns the cinema layout and a list of all currently available seats with their
 ### 2. Purchase a Ticket
 Reserves a seat if available and generates a unique UUID token for the buyer.
 
-- URL: http://localhost:28852/purchase
+  - URL: http://localhost:28852/purchase
 
-- Method: POST
+  - Method: POST
 
-- Headers: Content-Type: application/json
+  - Headers: Content-Type: application/json
 
-- Request Body:
+  - Request Body:
 
 ``` json
 {
@@ -125,16 +126,16 @@ Reserves a seat if available and generates a unique UUID token for the buyer.
 }
 ```
 
-3. Return a Ticket
+### 3. Return a Ticket
 Cancels a booking using the ticket token provided during purchase and releases the seat back to the available pool.
 
-- URL: http://localhost:28852/return
+  - URL: http://localhost:28852/return
 
-- Method: POST
+  - Method: POST
 
-- Headers: Content-Type: application/json
+  - Headers: Content-Type: application/json
 
-- Request Body:
+  - Request Body:
 
 ``` JSON
 {
@@ -154,16 +155,16 @@ Cancels a booking using the ticket token provided during purchase and releases t
 }
 ```
 
-4. View Admin Statistics
+### 4. View Admin Statistics
 Fetches financial metrics and current occupancy counts. Requires admin password authentication via a query parameter.
 
-- URL: http://localhost:28852/stats?password=super_secret
+  - URL: http://localhost:28852/stats?password=super_secret
 
-- Method: POST
+  - Method: POST
 
-- Query Parameter: password (Default: super_secret)
+  - Query Parameter: password (Default: super_secret)
 
-- Response (200 OK):
+  - Response (200 OK):
 
 ``` JSON
 {
